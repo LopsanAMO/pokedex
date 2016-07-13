@@ -31,4 +31,16 @@
         };
     });
 
+    app.controller('CommentsController', function(){
+        this.comment = [];
+        this.show = false;
+    });
+
+    app.filter('imageify', function () {
+    return function (input, ext) {
+      var url = "img/pokemones/" + input.toLowerCase() + "." +  ext || "jpg";
+      return url;
+    };
+  });
+
 })();
