@@ -1,4 +1,4 @@
-(function (){
+ (function (){
     var app = angular.module('pokedex', []);
 
     app.controller('PokemonController', function(){
@@ -32,8 +32,12 @@
     });
 
     app.controller('CommentsController', function(){
-        this.comment = [];
+        this.comments = [];
         this.show = false;
+
+        this.toggle = function(){
+            this.show = !this.show;
+        };
     });
 
     app.filter('imageify', function () {
